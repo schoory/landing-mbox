@@ -1,0 +1,151 @@
+body 
+  background: #000
+
+.tv
+  position: relative
+  margin-bottom: 25px
+
+  &__items
+    display: flex
+    flex-direction: row
+    align-items: center
+
+  &__item
+    margin-right: 41px
+
+  &__photo
+    border-radius: 20px
+    width: 206px
+    height: 309px
+
+.slider
+  position: relative
+  margin: 0 auto 
+
+  img
+    poiner-events: none  
+
+  &__title
+    position: relative
+    display: inline-block
+    text-decoration: none
+    color: #fff
+    font-weight: 700
+    font-size: 28px
+    line-height: 71%
+    padding-left: 19px
+    margin-bottom: 12px
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      margin: auto 0
+      width: 8px
+      height: 35px
+      background: linear-gradient(136.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+      border-radius: 50px
+    &::after
+      font-family: "Font Awesome"
+      content: '\f105'
+      margin-left: 10px
+
+  &__container
+    max-width: 1441px
+    width: 100%
+    margin: 0 auto
+
+  &__wrapper
+    max-width: 1508px
+    width: 100%
+    margin: 0 auto
+    overflow: hidden
+
+  &__list
+    position: relative
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    align-items: center
+    max-width: 1563px
+    width: 100%
+    margin: 0 auto
+
+  &__items
+    padding: 35px 0px
+
+  &__item
+    &:hover
+      filter: drop-shadow(0px 0px 20px rgba(44, 176, 249, 0.5))
+
+  &__arrow
+    position: absolute
+    color: #fff
+    width: 48px
+    height: 48px
+    text-decoration: none
+    font-size: 46px
+    text-align: center
+
+    &--right
+      right: 0px
+      &::before
+        font-family: "Font Awesome"
+        content: '\f105'
+        
+    &--left
+      left: 0px
+      &::before
+        font-family: "Font Awesome"
+        content: '\f104'
+
+@media screen and ( max-width: 1349px )
+  .slider
+    user-select: none  
+    touch-action: pan-y   
+    &__arrow
+      display: none
+    &__container
+      max-width: none
+      width: 100%
+      padding: 0px 50px
+    &__title
+      font-size: 56px
+      padding-left: 25px
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        margin: auto 0
+        width: 11px
+        height: 50px
+        background: linear-gradient(136.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+        border-radius: 50px
+      &::after
+        font-family: "Font Awesome"
+        content: '\f105'
+        margin-left: 10px
+    &__list
+      max-width: none
+      width: 100%
+    &__wrapper
+      padding: 0px 50px
+      max-width: none
+      width: 100%
+      .slider__container
+        padding: 0px 0px
+        overflow: hidden
+    &__items
+  
+  .tv
+    &__item
+      margin-right: 19.5px
+    &__photo
+      width: 254px
+      height: auto
+  

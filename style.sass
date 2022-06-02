@@ -1,0 +1,1397 @@
+@font-face 
+  font-family: 'Font Awesome'
+  src: local(""), url('../fonts/fontawesome-webfont.woff2')
+
+  
+/* marcellus-regular - latin
+@font-face
+  font-family: 'Marcellus'
+  font-style: normal
+  font-weight: 400
+  src: local(""), url('../fonts/marcellus-v8-latin-regular.woff2') format("woff2"), url('../fonts/marcellus-v8-latin-regular.woff') format("woff")
+
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+
+
+/* mulish-300 - latin
+@font-face
+  font-family: 'Mulish'
+  font-style: normal
+  font-weight: 300
+  src: local(""), url('../fonts/mulish-v3-latin-300.woff2') format("woff2"), url('../fonts/mulish-v3-latin-300.woff') format("woff")
+
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+
+
+/* mulish-regular - latin
+@font-face
+  font-family: 'Mulish'
+  font-style: normal
+  font-weight: 400
+  src: local(""), url('../fonts/mulish-v3-latin-regular.woff2') format("woff2"), url('../fonts/mulish-v3-latin-regular.woff') format("woff")
+
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+
+
+/* mulish-500 - latin
+@font-face
+  font-family: 'Mulish'
+  font-style: normal
+  font-weight: 500
+  src: local(""), url('../fonts/mulish-v3-latin-500.woff2') format("woff2"), url('../fonts/mulish-v3-latin-500.woff') format("woff")
+
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+
+
+/* mulish-700 - latin
+@font-face
+  font-family: 'Mulish'
+  font-style: normal
+  font-weight: 700
+  src: local(""), url('../fonts/mulish-v3-latin-700.woff2') format("woff2"), url('../fonts/mulish-v3-latin-700.woff') format("woff")
+
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+
+
+/* mulish-800 - latin
+@font-face
+  font-family: 'Mulish'
+  font-style: normal
+  font-weight: 800
+  src: local(""), url('../fonts/mulish-v3-latin-800.woff2') format("woff2"), url('../fonts/mulish-v3-latin-800.woff') format("woff")
+
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+
+
+/* mulish-900 - latin
+@font-face
+  font-family: 'Mulish'
+  font-style: normal
+  font-weight: 900
+  src: local(""), url('../fonts/mulish-v3-latin-900.woff2') format("woff2"), url('../fonts/mulish-v3-latin-900.woff') format("woff")
+
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+
+
+html
+  -webkit-font-smoothing: antialiased
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  overflow-x: hidden
+
+*
+  -webkit-box-sizing: inherit
+  box-sizing: inherit
+  &::before, &::after
+    -webkit-box-sizing: inherit
+    box-sizing: inherit
+
+body
+  font-family: 'Mulish', serif
+  background-color: #000
+  color: #fff
+  overflow-x: hidden
+
+a
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  &:focus, &:hover, &:active
+    outline: 0
+    outline-offset: 0
+
+.container
+  max-width: 1500px
+  width: 100%
+  margin: 0 auto
+  transition: all 0.3s ease
+
+.search
+  position: relative
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  align-items: center
+  background: transparent
+  border-radius: 20px
+  transition: all 500ms
+  overflow: hidden
+  height: 50px
+  width: 20px
+  &__input
+    position: absolute
+    right: -300px
+    width: 250px
+    font-family: 'Mulish', serif
+    color: #fff
+    font-weight: 600
+    font-size: 18px
+    border: 0px solid transparent
+    border-radius: 20px
+    background: transparent
+  &__ico
+    position: absolute
+    right: 0
+    z-index: 1
+    
+
+.transition-btn
+  display: flex
+  padding: 15px 30px
+  background: linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+  border-radius: 100px
+  font-weight: 800
+  font-size: 16px
+  line-height: 125%
+  color: #fff
+  text-decoration: none
+  &:hover
+    box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5)
+  &--hit
+    margin-right: 20px
+    &::before
+      content: ''
+      display: inline-block
+      width: 14px
+      height: 18px
+      margin-right: 15px
+      background: url(../images/ico/Play.svg) center no-repeat
+  &--white
+    background: #fff
+    box-shadow: none
+    color: #323232
+    &:hover
+      box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.5)      
+
+
+.navmobile
+  display: none
+
+.navbar
+  display: block
+  margin-top: 15px 
+  width: 100%
+  position: fixed
+  z-index: 999
+  transition: 0.25s  
+  background: transparent
+  &--black
+    background: #000000
+    margin-top: 0px
+    height: 100px
+    padding: 15px 0px
+    &::before
+      position: absolute
+      display: inline-block
+      content: ''
+      left: 0%
+      right: 0%
+      bottom: 0
+      width: 100%
+      height: 2px
+      background: #050505
+      transition: all 0.25s
+  &__list
+    position: relative
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+  &__items
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+  &__item
+    position: relative
+    margin-right: 54px
+    color: #818182
+    text-decoration: none
+    font-size: 16px
+    font-weight: 700
+    line-height: 125%
+    &--active
+      font-size: 16px
+      font-weight: 800
+      color: #fff      
+    &:hover
+      &::before
+        content: ''
+        position: absolute
+        height: 2px
+        border-radius: 1em
+        top: 100%
+        margin-top: 5px
+        width: 100%
+        background: linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+    &::last-child
+      margin-left: 0px
+  &__navbuttons
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-items: center
+  &__navbutton
+    margin-right: 75px
+    &:last-child
+      margin: 0
+  &__burger 
+    display: none
+
+.hit
+  position: relative
+  width: 100%
+  margin: 0 auto 60px
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    top: 100%
+    height: 2px
+    width: 1500px
+    margin: auto
+    background: #2F2E2E
+  &__background-image
+    position: absolute
+    left: 0
+    top: 0
+    background: url(../images/hit/NightWatch.png) top right no-repeat
+    width: 100%
+    height: 100%
+  &__container
+    width: 100%
+    position: relative
+    padding: 298px 195px 242px 251px
+    margin: 0 auto
+  &__title
+    line-height: 70%
+    margin-bottom: 19px
+    font: normal 400 100px 'Marcellus', serif
+  &__stats
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    font-size: 16px
+    font-weight: 800
+    align-items: center
+    margin-bottom: 25px
+  &__year, &__seasons
+    margin-right: 18.25px
+  &__limit 
+    display: flex   
+    width: 60px
+    height: 24px
+    background: linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+    border-radius: 1em
+    margin-right: 18.25px
+    p
+      display: inherit
+      padding: 6px 15px
+      width: 58px
+      justify-content: center
+      align-items: center
+      height: 22px
+      background: #000
+      border-radius: 1em
+      margin: auto
+  &__rating
+    position: relative
+    &::before
+      content: ''
+      display: inline-block
+      margin-right: 7px 
+      width: 16px
+      height: 16px
+      background: url(../images/ico/Rating.svg) center no-repeat
+  &__subtitle
+    font-size: 18px
+    font-weight: 400
+    line-height: 156%
+    color: #C2C2C2
+    max-width: 468px
+    margin-bottom: 25px
+  &__buttons
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+
+
+.premiere
+  margin-bottom: 121px
+  &__container
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    max-width: 1441px
+    width: 100%
+    margin: 0 auto
+    border-radius: 20px
+    overflow: hidden
+    background: linear-gradient(87.02deg, #0D1A73 29.67%, #000000 70.52%)
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.1)
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  &__title-photo
+    margin-bottom: 31px
+  &__title
+    font-weight: 700
+    line-height: 20px
+    font-size: 64px
+
+
+.register
+  margin-bottom: 121px
+  &__container
+    position: relative
+    max-width: 1224px
+    width: 100%
+    max-height: 270px
+    height: 100%
+    border-radius: 20px
+    margin: 0 auto
+    background: url('../images/register/Register Now.jpg') center no-repeat
+  &__dimming
+    position: absolute 
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    width: inherit
+    height: inherit
+    background: linear-gradient(336.56deg, #000000 58.12%, #FFFFFF 124.09%)
+    opacity: 0.5
+    border-radius: inherit
+  &__content
+    position: inherit
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-items: center
+    width: 100%
+    padding: 71px 152px 71px 57px
+    border-radius: inherit
+  &__title
+    font-weight: 700
+    font-size: 64px
+    line-height: 100%
+    text-transform: capitalize
+    margin-right: 82px
+    max-width: 792px
+  &__button
+    width: 141px
+    height: 50px
+    padding: 15px 18px
+
+
+.trends
+  margin-bottom: 100px
+  &__buttons
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    padding-left: 29.5px
+.popular
+  margin-bottom: 100px
+
+.genres
+  position: relative
+  max-width: 1441px
+  width: 100%
+  margin: 0 auto 55px auto
+  a
+    text-decoration: none
+  &__title
+    position: relative
+    display: inline-block
+    text-decoration: none
+    color: #fff
+    font-weight: 700
+    font-size: 28px
+    line-height: 71%
+    padding-left: 19px
+    margin-bottom: 40px
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      margin: auto 0
+      width: 8px
+      height: 35px
+      background: linear-gradient(136.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+      border-radius: 50px
+    &::after
+      font-family: "Font Awesome"
+      content: '\f105'
+      margin-left: 10px
+    
+  &__items
+    display: grid
+    grid-gap: 27px
+    grid-template-columns: repeat(4, 1fr)
+    align-items: center
+    justify-content: center
+  &__item
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    border-radius: 20px
+    width: 340px
+    height: 198px
+    &:hover
+      
+    &--romance 
+      background: linear-gradient(109.31deg, #FD093F 2.4%, #F383F1 100%)
+    &--drama
+      background: linear-gradient(114.5deg, #0FFFDA 2.22%, #3CDB77 68.84%)
+    &--historical
+      background: linear-gradient(109.31deg, #B936FF 2.4%, #57DEDA 100%)
+    &--action
+      background: linear-gradient(109.31deg, #FD093F 2.4%, #FB1378 2.41%, #FCCB1A 100%)
+    &--scifi
+      background: linear-gradient(109.31deg, #FF6472 2.4%, #FDA75D 100%)
+      img
+        transform: rotate(-43.5deg)
+    &--horror
+      background: linear-gradient(110.16deg, #13547A 2.37%, #80D0C7 96.77%)
+    &--comedy
+      background: linear-gradient(109.93deg, #FFF77B 2.37%, #FFBF42 50%)
+    &--documentary
+      background: linear-gradient(109.31deg, #1FA2FF 2.4%, #1FA2FF 2.41%, #1F535C 97.46%)
+  &__item-title
+    color: #fff
+    font-size: 28px
+    font-weight: 700
+    line-height: 20px
+  &__ico
+    width: 80px
+    height: 80px
+    margin-bottom: 8px
+
+.footer
+  background: #101012
+  &__container
+    display: grid
+    grid-template-columns: 157px 1fr
+    column-gap: 84px
+    max-width: 1110px
+    width: 100%
+    margin: 0 auto
+    padding: 70px 0px
+  &__links
+    width: 100%
+  &__logo
+    margin-bottom: 21px
+  &__socials
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+  &__social-link
+    margin-right: 13px
+    &::last-child
+      margin-right: 0px
+  &__list
+    flex-basis: auto
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    width: auto
+    justify-content: space-between
+  &__items
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+  &__item
+    text-decoration: none
+    color: #C2C2C2
+    line-height: 20px
+    font-size: 16px
+    font-weight: 600
+    margin-bottom: 20px
+    &:last-child
+      margin-bottom: 0px
+
+
+/* SLIDER --------------------------- */
+.slider
+  position: relative
+  margin: 0 auto  
+
+  &__title
+    position: relative
+    display: inline-block
+    text-decoration: none
+    color: #fff
+    font-weight: 700
+    font-size: 28px
+    line-height: 71%
+    padding-left: 19px
+    margin-bottom: 12px
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      margin: auto 0
+      width: 8px
+      height: 35px
+      background: linear-gradient(136.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+      border-radius: 50px
+    &::after
+      font-family: "Font Awesome"
+      content: '\f105'
+      margin-left: 10px
+
+  &__container
+    max-width: 1441px
+    width: 100%
+    margin: 0 auto
+
+  &__wrapper
+    max-width: 1508px
+    width: 100%
+    margin: 0 auto
+    overflow: hidden
+
+  &__list
+    position: relative
+    display: flex
+    flex-direction: row
+    align-items: center
+    max-width: 1563px
+    width: 100%
+    margin: 0 auto
+
+  &__items
+    padding: 35px 0px
+
+  &__item
+    &:hover
+      filter: drop-shadow(0px 0px 20px rgba(44, 176, 249, 0.5))
+
+  &__arrow
+    position: absolute
+    color: #fff
+    width: 48px
+    height: 48px
+    text-decoration: none
+    font-size: 46px
+    text-align: center
+
+    &--right
+      right: 0px
+      &::before
+        font-family: "Font Awesome"
+        content: '\f105'
+        
+    &--left
+      left: 0px
+      &::before
+        font-family: "Font Awesome"
+        content: '\f104'
+
+  &__scroll
+    display: none
+/* TV SHOWS --------------------------- */
+
+.tv
+  position: relative
+  margin-bottom: 25px
+
+  &__items
+    display: flex
+    flex-direction: row
+    align-items: center
+
+  &__item
+    margin-right: 41px
+
+  &__photo
+    border-radius: 20px
+    width: 206px
+    height: 309px
+
+/* MOVIES --------------------------- */
+
+.movies
+  position: relative
+  margin-bottom: 15px
+
+  &__items
+    display: flex
+    flex-direction: row
+    align-items: center
+
+  &__item
+    margin-right: 41px
+
+  &__photo
+    border-radius: 20px
+    width: 206px
+    height: 309px
+
+/* CHANNELS --------------------------- */
+
+.channels
+  position: relative
+  margin-bottom: 15px
+
+  &__items
+    display: flex
+    flex-direction: row
+    align-items: center
+
+  &__item
+    width: 260px
+    height: 118px
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    margin-right: 35px
+    background: #fff
+    border-radius: 20px
+
+  &__photo
+    width: auto
+    height: 40px
+
+/* PERSONS --------------------------- */
+
+.persons
+  position: relative
+  margin-bottom: 15px
+
+  &__items
+    display: flex
+    flex-direction: row
+    align-items: center
+    a
+      text-decoration: none
+
+  &__item
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    margin-right: 60px
+
+  &__wrapper
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 190px
+    height: 190px
+    border-radius: 100%
+    overflow: hidden
+    margin-bottom: 20px
+
+  &__photo
+    position: absolute
+    top: 0px
+    width: 220px
+
+  &__name
+    color: #fff
+    font-size: 18px
+    font-weight: 700
+    line-height: 20px
+
+/* MEDIA (SMALL DESKTOP) --------------------------- */
+
+@media screen and ( max-width: 1599px )
+  
+  .genres
+    max-width: 1195px
+    &__items
+      grid-template-columns: repeat(4, 1fr)
+    &__item
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      border-radius: 20px
+      width: 100%
+      height: 198px
+
+  .slider 
+    &__container
+      max-width: 1195px
+    &__wrapper
+      max-width: 1265px
+    &__list
+      max-width: 1312px
+
+  .channels
+    &__items
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      grid-gap: 35px
+    &__item
+      margin: 0
+    &__arrow
+      display: none
+
+  .premiere
+    &__container
+      max-width: 1195px
+    &__photo
+      width: 597px
+
+  .register
+    &__container
+      max-width: 1195px
+    &__content
+      flex-direction: column
+      align-items: start
+      padding: 30px 152px 30px 57px
+    &__title
+      margin-bottom: 16px
+
+  .trends__buttons
+    padding-left: 52px
+
+  .container
+    max-width: 1305px
+
+  .hit
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      top: 100%
+      height: 2px
+      width: 1300px
+      margin: auto
+      background: #2F2E2E
+    &__container
+      max-width: 1060px
+      padding: 239px 0px 242px 0px
+  
+/* MEDIA (LAPTOP) --------------------------- */
+
+@media screen and ( max-width: 1349px )
+
+  .navbar
+    margin: 0px
+    padding: 25px
+    position: relative
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    background: #000
+    height: auto
+    &::before
+      content: ''
+      position: absolute
+      display: inline-block
+      left: 0%
+      right: 0%
+      bottom: 0%
+      width: 100%
+      height: 2px
+      background: #0a0a0a
+    &__logo
+      height: 100px
+    &__items
+      display: none
+    &__navbuttons
+      display: none
+    &__burger
+      display: block
+      position: relative
+      align-items: center
+      width: 80px
+      height: 50px
+      cursor: pointer
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+      span
+        display: block
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(50%)
+        width: 100%
+        height: 2px
+        background: #fff
+        transition: all 0.25s ease
+        &:first-child
+          top: 0
+          transform: none
+        &:last-child
+          top: 100%
+          transform: none
+  
+  .navmobile 
+    position: fixed
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    top: 0
+    width: 100vw
+    right: -100vw
+    height: 100vh
+    background: transparent
+    transition: 0.25s
+    z-index: 999
+    &__dimmer
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background: #000
+      transition: all 0.2s
+      opacity: 0
+      z-index: 1
+    &__menu
+      position: relative
+      display: flex
+      flex-direction: column
+      width: 70%
+      height: 100%
+      background: #050505
+      padding: 15px 25px
+      z-index: 2
+      border-right: 2px solid #050505
+    &__search
+      position: relative
+      display: flex
+      flex-direction: row
+      align-items: center
+      background: #0a0a0a
+      border-radius: 20px
+      padding: 0px 0px
+      width: auto
+      transition: all 0.25s ease
+      &--active
+        width: 100%
+        padding: 15px
+        .navmobile__search-input
+          display: block
+    &__search-input
+      flex-basis: auto
+      height: 100px
+      width: 80%
+      background: transparent
+      border-radius: 20px
+      border: 1px solid transparent
+      color: #fff
+      font-weight: 600
+      font-size: 48px
+      display: none
+    &__search-link
+      display: flex
+      border-radius: 20px
+      background: #0f0f0f
+      justify-content: center
+      align-items: center
+      height: 100px
+      width: 100px
+      margin: 0 auto
+    &__search-ico
+      margin: auto 0
+      height: 60px
+      width: auto
+    &__navbuttons
+      position: relative
+      display: flex
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      width: 100%
+      padding-top: 15px
+    &__navbutton
+      display: flex
+      border-radius: 20px
+      background: #0f0f0f
+      justify-content: center
+      align-items: center
+      height: 100px
+      width: 100px
+      margin-right: 20px
+      img
+        height: 60px
+        width: auto
+    &__list
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-content: center
+      height: 100%
+      li
+        max-width: 250px
+        margin-bottom: 50px
+        &:last-child
+          margin-bottom: 0
+    &__item-link
+      text-decoration: none
+    &__item
+      position: relative
+      display: flex
+      align-items: center
+      font-size: 48px
+      border-radius: 20px
+      color: #818182
+      padding-left: 15px
+      &--active
+        color: #fff
+        &::before
+          content: ''
+          position: absolute
+          height: 2px
+          border-radius: 1em
+          top: 100%
+          margin-top: 5px
+          width: 100%
+          background: linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+
+  .container 
+    max-width: none
+    width: 100%
+
+  .hit
+    height: 1450px
+    &::after
+      content: ''
+      position: absolute
+      height: 0px
+      width: 0px
+    &__background-image
+      background: url(../images/hit/NightWatch.png) 55% no-repeat
+      opacity: 0.5
+    &__container
+      padding: 150px 0px 150px 50px
+    &__title
+      max-width: 600px
+      text-align: center
+      font-size: 180px
+    &__stats
+      max-width: 600px
+      justify-content: center
+      font-size: 28px
+    &__year, &__limit, &__seasons, &__rating
+      position: relative
+      margin-right: 30px
+      &::after 
+        position: absolute
+        display: block
+        content: ''
+        height: 10px
+        width: 10px
+        border-radius: 20px
+        background: #2b2b2b
+        right: -18px
+        top: 50%
+        transform: translateY(-50%)
+      &:last-child
+        margin-right: 0px
+        &::after
+          display: none
+    &__limit
+      position: relative
+      background: transparent
+      &::before
+        content: ''
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        top: 125%
+        width: 85%
+        height: 2px
+        background: linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+    &__subtitle
+      font-size: 28px
+      text-align: center
+      max-width: 600px
+      margin-bottom: 40px
+    &__buttons
+      max-width: 600px
+      justify-content: center
+
+  
+  .transition-btn
+    font-size: 38px
+    width: 450px
+    padding: 25px 50px
+    align-items: center
+    justify-content: center
+    height: 97px
+    &--hit
+      margin-right: 0px
+      margin-bottom: 30px
+      &::before
+        content: ''
+        display: inline-block
+        width: 19px
+        height: 24px
+        margin-right: 15px
+        background: url(../images/ico/Play.svg) center no-repeat
+        background-size: cover
+
+
+  .slider
+    &__container
+      max-width: none
+      width: 100%
+      padding: 0px 50px
+    &__title
+      font-size: 56px
+      padding-left: 25px
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        margin: auto 0
+        width: 11px
+        height: 50px
+        background: linear-gradient(136.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+        border-radius: 50px
+      &::after
+        font-family: "Font Awesome"
+        content: '\f105'
+        margin-left: 15px
+    &__list
+      max-width: none
+      width: 100%
+    &__wrapper
+      padding: 0px 50px
+      max-width: none
+      width: 100%
+      overflow: hidden
+      .slider__container
+        padding: 0px
+        overflow: hidden
+    &__arrow
+      display: none
+
+    &__scroll
+      position: relative
+      display: block
+      width: 100%
+      height: 4px
+      border-radius: 1em
+      background: #202020
+    &__scroll-line
+      transition: all 0.5s
+      position: absolute
+      top: 0
+      right: calc(100%-150px)
+      width: 150px
+      height: 4px
+      border-radius: 1em
+      background: #818182
+  
+  .tv
+    margin-bottom: 60px
+    &__item
+      margin-right: 19.5px
+    &__photo
+      width: 254px
+      height: 381px
+  .movies
+    margin-bottom: 60px
+    &__item
+      margin-right: 19.5px
+    &__photo
+      width: 254px
+      height: 381px
+  .genres
+    margin-bottom: 75px
+    max-width: none
+    width: 100%
+    padding: 0px 50px
+    &__title
+      font-size: 56px
+      padding-left: 25px
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        margin: auto 0
+        width: 11px
+        height: 50px
+        background: linear-gradient(136.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+        border-radius: 50px
+      &::after
+        font-family: "Font Awesome"
+        content: '\f105'
+        margin-left: 15px
+    &__items
+      grid-template-columns: repeat(2, 1fr)
+    &__item 
+      height: 250px
+    &__item-title
+      color: #fff
+      font-size: 48px
+    &__ico
+      width: 120px
+      height: 120px
+      margin-bottom: 15px
+
+  .channels
+    margin-bottom: 50px
+    &__items
+      grid-template-columns: repeat(2, 1fr)
+    &__item
+      width: 100%
+      height: 150px
+    &__photo
+      height: 80px
+
+  .persons
+    margin-bottom: 50px
+
+  .premiere
+    margin-bottom: 80px
+    &__container
+      grid-template-columns: repeat(1, 1fr)
+      border-radius: 0px
+      height: auto
+    &__photo
+      width: 100%
+    &__content
+      height: 350px
+
+  .register
+    margin-bottom: 0px
+    &__container
+      border-radius: 0px
+      max-width: none
+      max-height: none
+      width: 100%
+      height: auto
+      padding: 30px 0px
+      background-size: cover
+    &__content
+      position: relative
+      padding: 0px
+      max-width: 800px
+      margin: 0px auto
+      text-align: center
+      justify-content: center
+      align-items: center
+    &__dimming
+      width: 100%
+      height: 100%
+    &__title
+      max-width: none
+      width: 100%
+      margin-bottom: 40px
+      margin-right: 0px
+
+  .footer 
+    &__container
+      max-width: none
+      width: 100%
+      padding: 70px 50px
+      grid-template-columns: repeat(1,1fr)
+      justify-content: center
+      align-items: center
+    &__links
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 80px
+    &__logo
+      height: 100px
+      width: auto
+      margin-bottom: 0px
+      margin-right: 50px
+    &__socials
+      a
+        display: flex
+        flex-direction: row
+        width: 80px
+        height: 80px
+        justify-content: center
+        align-items: center
+        background: #1b1b1b
+        border-radius: 14px
+        margin-right: 15px
+    &__social-link
+      width: 50px
+      height: 50px
+      margin-right: 0px
+    &__list
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: 60px
+    &__item
+      font-size: 28px
+      margin-bottom: 40px
+
+/* MEDIA (SMARTPHONES) --------------------------- */
+
+@media screen and ( max-width: 899px ) 
+  .navbar
+    padding: 15px
+    &__logo
+      height: 50px
+      width: auto
+    &__burger
+      height: 30px
+      width: 50px
+  .navmobile
+    &__menu
+      padding: 15px
+      width: 80%
+    &__navbutton
+      height: 70px
+      width: 70px
+      img
+        height: 50px
+        width: 50px
+    &__search
+      width: auto
+    &__search-link
+      height: 70px
+      width: 70px
+    &__search-ico
+      height: 50px
+      width: 50px
+  .hit
+    height: auto
+    &__background-image
+      position: relative
+      width: 70%
+      height: 170px
+      margin: 20px auto
+      background-size: cover
+      background-position-x: 115%
+      border-radius: 20px
+      box-shadow: 0 0 12px 3px #000 inset
+      opacity: 1
+    &__container
+      padding: 0px 15px
+    &__title
+      font-size: 68px
+      margin-bottom: 20px
+    &__stats
+      max-width: none
+      width: 100%
+      font-size: 16px
+      margin-bottom: 20px
+    &__year, &__limit, &__seasons, &__rating
+      margin-right: 20px
+      &::after
+        display: none
+    &__limit
+      width: auto
+      p
+        padding: 0px
+        width: auto
+      &::before
+        top: 95%
+        width: 100%
+    &__subtitle
+      font-size: 16px
+      margin-bottom: 20px
+    &__navbuttons
+      max-width: none
+      width: 100%
+  .transition-btn
+    font-size: 22px
+    padding: 15px 30px
+    width: 250px
+    height: auto
+    &--hit
+      margin-bottom: 20px
+      &::before
+        width: 14px
+        height: 19px
+  .slider
+    &__title
+      font-size: 24px
+      line-height: 30px
+      max-width: 200px
+    &__container
+      padding: 0px 20px
+    &__wrapper
+      padding: 0px 20px
+    &__items
+      padding: 20px 0px
+    &__scroll-line
+      width: 80px
+  .tv
+    &__photo
+      width: 154px
+      height: 231px
+  .movies
+    &__photo
+      width: 154px
+      height: 231px
+  .genres
+    padding: 0px 20px
+    &__title
+      font-size: 24px
+      line-height: 30px
+      max-width: 200px
+    &__items
+      grid-template-columns: repeat(1, 1fr)
+    &__item-title
+      font-size: 36px
+  .channels
+    &__items
+      grid-template-columns: repeat(1, 1fr)
+      grid-gap: 20px 0px
+    &__photo
+      height: 70px
+  .persons
+    &__wrapper
+      width: 145px
+      height: 145px
+    &__photo
+      width: 160px
+    &__name
+      font-size: 16px
+  .premiere
+    &__content
+      height: 250px
+    &__title-photo
+      width: 234px
+    &__title
+      font-size: 36px
+  .footer
+    &__container
+      padding: 30px 15px
+      grid-gap: 30px 0px
+    &__links
+      width: 100%
+      padding: 0px 15px
+      margin-bottom: 0px
+    &__logo
+      height: 70px
+      margin-right: 0px
+    &__socials
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: 15px
+      a
+        width: 50px
+        height: 50px
+        margin-right: 0px
+    &__social-link
+      width: 30px
+      height: 30px
+    &__list
+      grid-gap: 15px
+    &__item
+      font-size: 18px
+      line-height: 35px
+      margin-bottom: 10px
+     
+
+
+        
+
+  
